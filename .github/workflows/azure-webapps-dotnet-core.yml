@@ -67,15 +67,10 @@ jobs:
           zip -r ../output .
           
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: .net-app
-          path: ./publish
-
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: .net-app
+          path: ./myapp
 
   # deploy:
   #   permissions:

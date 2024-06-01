@@ -90,9 +90,8 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.__clientidsecretname__ }}
-          tenant-id: ${{ secrets.__tenantidsecretname__ }}
-          subscription-id: ${{ secrets.__subscriptionidsecretname__ }}
+          client-id: $DemoCICDTraining
+          subscription-id: 4c309aaa-c3d0-47b8-b3d1-0feb37a9b284
           
       - name: Deploy to Azure Web App
         id: deploy-to-webapp

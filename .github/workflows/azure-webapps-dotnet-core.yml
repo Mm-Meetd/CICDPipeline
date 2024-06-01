@@ -90,7 +90,8 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: $DemoCICDTraining
+          client-id: 69e9508c-65b6-44eb-8405-4fff64537b8f
+          tenant-id: 380606ad-5b1b-4d96-b9cc-952db72ace41
           subscription-id: 4c309aaa-c3d0-47b8-b3d1-0feb37a9b284
           
       - name: Deploy to Azure Web App

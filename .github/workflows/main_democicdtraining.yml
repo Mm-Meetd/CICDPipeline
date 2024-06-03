@@ -29,7 +29,7 @@ jobs:
 
       - name: Deploy
         run: |
-           Copy-Item publish\* C:\inetpub\wwwroot -Recurse -Force
+           Copy-Item publish\* C:\PublishOnIIS\DemoCICD -Recurse -Force
            Import-Module WebAdministration
            Stop-WebSite 'Default Web Site'
            $appPool = Get-Item "IIS:\AppPools\Default Web Site"

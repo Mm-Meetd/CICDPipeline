@@ -25,4 +25,4 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run:  publish -o publish
+        run:  dotnet publish -o publish

@@ -29,9 +29,9 @@ jobs:
 
       - name: Deploy
         run: |
-           Copy-Item publish\* C:\PublishOnIIS\DemoCICD -Recurse -Force
            Import-Module WebAdministration
            Stop-WebSite 'Default Web Site'
+           Copy-Item publish\* C:\PublishOnIIS\DemoCICD -Recurse -Force
            $appPool = Get-Item "IIS:\AppPools\DefaultAppPool"
            if($appPool.State -eq 'Started')
            {

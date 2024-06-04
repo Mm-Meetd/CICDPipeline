@@ -31,6 +31,17 @@ jobs:
         run: |
            Import-Module WebAdministration
            Stop-WebSite 'Default Web Site'
+           $dllPaths = @(
+           'C:\PublishOnIIS\DemoCICD\CICDPipelineDemo.dll'
+           )
+           foreach ($dllPath in $dllPaths) {
+              if (Test-Path $dllPath) {
+                  $processesUsingDll = Get-Process | Where-Object { $_.Modules.ModuleName -eq (Get-Item $dllPath).Name }
+                  foreach ($process in $processesUsingDll) {
+                      Stop-Process -Id $process.Id -Force
+                  }
+              }
+           }
            Copy-Item publish\* C:\PublishOnIIS\DemoCICD -Recurse -Force
            $appPool = Get-Item "IIS:\AppPools\DefaultAppPool"
            if($appPool.State -eq 'Started')

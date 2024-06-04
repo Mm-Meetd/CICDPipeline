@@ -32,7 +32,7 @@ jobs:
            Copy-Item publish\* C:\PublishOnIIS\DemoCICD -Recurse -Force
            Import-Module WebAdministration
            Stop-WebSite 'Default Web Site'
-           $appPool = Get-Item "IIS:\AppPools\Default Web Site"
+           $appPool = Get-Item "IIS:\AppPools\DefaultAppPool"
            if($appPool.State -eq 'Started')
            {
              Stop-WebAppPool -Name $appPool.Name 

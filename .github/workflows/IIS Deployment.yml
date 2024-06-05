@@ -4,15 +4,11 @@
 name: IIS Deployment - DemoCICDTraining
 
 on:
-# Workflow run on specif event 
-# push: Automatically run the workflow when any push event will trigger
    push:
-     branches: [ "main" ]
-# pull_request: Automatically run the workflow when any pull request will create
+     branches: [ "develop" ]  # push: Automatically run the workflow when any push event will trigger
    pull_request:
-     branches: [ "main" ]
-# To run the workflow manually you need to add workflow_dispatch
-   workflow_dispatch:
+     branches: [ "develop" ]  # pull_request: Automatically run the workflow when any pull request will create
+   workflow_dispatch:         # To run the workflow manually you need to add workflow_dispatch
 
 jobs:
   build:

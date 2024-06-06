@@ -8,7 +8,7 @@ on:
      branches: [ "develop" ]  # push: Automatically run the workflow when any push event will trigger
    pull_request:
      branches: [ "develop" ]  # pull_request: Automatically run the workflow when any pull request will create
-   workflow_dispatch:         # To run the workflow manually you need to add workflow_dispatch
+   # workflow_dispatch:         # To run the workflow manually you need to add workflow_dispatch
 
 jobs:
   build:

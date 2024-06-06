@@ -31,13 +31,7 @@ jobs:
       - name: Deploy
         run: |
            Import-Module WebAdministration
-           $principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
-           if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-             Start-Process powershell -ArgumentList "Stop-WebSite 'Default Web Site'" -Verb runAs
-           } else {
-            Stop-WebSite 'Default Web Site'
-           }
-           # Stop-WebSite 'Default Web Site'
+           Stop-WebSite 'Default Web Site'
            $dllPaths = @(
            'C:\PublishOnIIS\DemoCICD\CICDPipelineDemo.dll'
            )

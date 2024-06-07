@@ -12,7 +12,8 @@ on:
 
 jobs:
   build:
-   runs-on: [self-hosted, LocalRun]
+   runs-on: windows-latest
+   # runs-on: [self-hosted, LocalRun]
    steps:
       - uses: actions/checkout@v4
 

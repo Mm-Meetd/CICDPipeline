@@ -19,7 +19,4 @@ jobs:
      - name: Azure login
        uses: azure/login@v2
        with:
-          client-id: 637803f7-0b9d-4a5d-b0e7-4ccdf33f0cf3
-          tenant-id: f8e700e2-5bc3-49fc-9cab-a3ff3c28c23d
-          subscription-id: a3737467-953c-4977-8aa1-9c7a6e2d0ff4
-          enable-AzPSSession: true
+         creds: '{"clientId":"637803f7-0b9d-4a5d-b0e7-4ccdf33f0cf3","clientSecret":"f1aa0116-d294-44b8-abbc-018a8b3830cf","subscriptionId":"a3737467-953c-4977-8aa1-9c7a6e2d0ff4","tenantId":"f8e700e2-5bc3-49fc-9cab-a3ff3c28c23d"}'

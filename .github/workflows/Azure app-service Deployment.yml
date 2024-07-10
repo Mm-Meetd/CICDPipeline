@@ -1,10 +1,10 @@
 name: Azure app-service Deployment
 
 on:
-   push:
-     branches: [ "main" ]  # push: Automatically run the workflow when any push event will trigger
-   pull_request:
-     branches: [ "main" ]  # pull_request: Automatically run the workflow when any pull request will create
+   # push:
+   #   branches: [ "main" ]  # push: Automatically run the workflow when any push event will trigger
+   # pull_request:
+   #   branches: [ "main" ]  # pull_request: Automatically run the workflow when any pull request will create
    workflow_dispatch:      # To run the workflow manually you need to add workflow_dispatch
 
 jobs:
